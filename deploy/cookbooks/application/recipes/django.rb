@@ -52,6 +52,7 @@ end
 
 ## Create a virtualenv for the app
 ve = python_virtualenv app['id'] do
+  interpreter "python2.7"
   path "#{app['deploy_to']}/shared/env"
   action :create
 end
